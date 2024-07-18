@@ -1,0 +1,1641 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;0,600;1,200;1,300;1,400&family=Montserrat:wght@300;400;500;700;800;900&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-light: #e5e2e2;
+    --color-dark: #020c26a8;
+    --color-black: #000000;
+    --color-primary: #021034;
+    --color-primary-light: hsl(54, 100%, 51%);
+    --color-success:#29f5a4;
+    --color-warning: #ff6933;
+ 
+    --transition: all 400ms ease;
+
+
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   border: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+ body {
+    background: var(--color-primary);
+    font-family: 'Kanit', sans-serif;
+    color: var(--color-white);
+    max-width: 100vw;
+
+ }
+
+ h1, h2, h3, h4, h5 {
+    color: var(--color-black);
+    line-height: 1.2;
+
+ }
+h1 {
+    font-size: 3.8rem; 
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.86rem;
+}
+
+
+p {
+    line-height: 1.8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10rem 0 7rem;
+    max-width: 100vw;
+    overflow-x: hidden; 
+}
+
+section h1 {
+    text-align: center;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+img {
+    width: 100%;
+}
+button{
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    display: inline-block;
+    margin: 2rem;
+    transition: var(--transition);
+    border-radius: 5rem;
+
+}
+.btn {
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    display: inline-block;
+    margin: 2rem;
+    transition: var(--transition);
+    border-radius: 5rem;
+    
+}
+
+.btn:hover {
+  box-shadow: 0 0.5rem 1rem var(--color-light);  
+}
+
+.btn-primary {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+
+}
+
+/*===================NAVBAR============================*/
+nav {
+    width: 100%;
+    height: 6rem;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid var(--color-primary-light);
+    padding: 0.4rem 3.4rem;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 10%;
+
+}
+
+
+nav button {
+    display: none;
+
+}
+
+nav img{
+    width: 9rem;
+    
+}
+nav .container ul {
+    display: flex;
+    height: 100%;
+   
+  }
+nav .container ul li a {
+height: 100%;
+width: 7rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--color-white);
+
+}
+nav .container ul li a:hover {
+    color: var(--color-primary-light);
+}
+nav .container ul li a.active {
+    height: 6rem;
+    background: var(--color-primary-light);
+    color: var(--color-white);
+}
+
+
+/*=======================LANDING SECTION================================= */
+
+section.landing {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 12rem;
+    
+}
+ section.landing .container {
+    display: grid;
+    grid-template-columns: 5rem auto 30rem;
+    gap: 3rem;
+    
+ }
+
+ section.landing .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    
+ }
+
+ section.landing .socials a{
+    font-size: 2rem;
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 0.3rem;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    outline: auto;
+   
+}
+
+ section.landing .socials a:hover {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+ }
+
+ .landing .info h1 {
+    text-align: left;
+   margin-bottom: 1rem;
+    color: var(--color-primary-light);
+ }
+ .landing .info small{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: var(--color-white);
+    line-height: 1.5rem;
+
+ }
+
+.landing .info h3 {
+    margin: 1.5rem 0;
+    letter-spacing: 0.1rem;
+    margin-left: 2rem;
+    color: var(--color-white)
+}
+
+section.landing .profile-area {
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+
+.landing .profile-area .outer-circle {
+    width: 27rem;
+    height: 27rem;
+    border: 1.5px solid var(--color-primary-light); 
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+
+}
+
+@keyframes move {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+section.landing .profile-area .outer-circle span {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1rem var(--color-primary);
+}
+
+section.landing .profile-area .outer-circle span:nth-child(1) {
+ left: calc(50% - 2rem);
+ top: -2rem ;
+
+}
+section.landing .profile-area .outer-circle span:nth-child(2) {
+   right: -2rem;
+   top: calc(50% - 2rem); 
+}
+section.landing .profile-area .outer-circle span:nth-child(3) {
+   left: -2rem;
+   top:  calc(50% - 2rem); 
+}
+section.landing .profile-area .outer-circle span:nth-child(4) {
+   bottom: -2rem;
+   left: calc(50% - 2rem); 
+}
+
+section.landing .profile-area .inner-circle {
+    position: absolute;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/*======================SERVICES=========================*/
+
+section.services {
+    background: var(--color-white);
+    top: 0;
+}
+
+section.services .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+section.services h1{
+    margin-top: -5rem;
+}
+
+section.services .container .service {
+    background: var(--color-primary);
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction:  column;
+    color: var(--color-white);
+    gap: 2rem;
+    cursor: default;
+    transition: var(--transition);
+}   
+
+section.services .container .service:hover {
+    box-shadow: 0 1rem 1rem var(--color-primary-light);
+    margin-top: 0.9rem;
+}
+
+
+section.services .service h4{
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 2rem;
+    
+}
+section.services .container .service p{
+    line-height: 1.4rem;
+    margin-top:-1rem;
+    text-align: start;
+    font-weight: 300;
+}
+section.services .container .service small{
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: var(--color-primary-light);
+    font-size: 1rem;
+}
+
+
+
+/*====================================ABOUT SECTION ================*/
+
+section.about {
+    background: var(--color-dark);
+}
+
+section.about .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 3rem;
+}
+
+section.about p {
+    margin: 1rem;
+    margin-left: -2rem;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 350;
+}
+section.about .side_image >img{
+    margin-top: -3rem;
+    width: 35rem;
+    
+    
+}
+section.about .info h1{
+    color: var(--color-primary-light);
+    margin-bottom: 1rem;
+}
+
+section.about .info .whatsapp a{
+    padding: 1rem 2rem;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    border-radius: 2rem;
+    transition: var(--transition);
+   
+}
+section.about .info .whatsapp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+section.about .info .whatsapp a:hover{
+    color: var(--color-primary-light);
+    background: var(--color-white);
+    box-shadow: 0 0.5rem 1rem var(--color-primary-light);
+}
+section.about .info a {
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: var(--color-primary);
+    cursor: pointer;
+  
+   
+}
+.about .info .material-symbols-sharp{
+    color: red;
+    align-items: flex-start;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+
+
+/*================== SKILL SECTION ======================*/
+section.skills{
+    background: var(--color-white);
+}
+section.skills .container {
+    width: 50%;
+    
+}
+section.skills h1{
+  position: absolute;
+  margin-left: 45%; 
+ 
+}
+
+section.skills >P {
+    margin: 0 12rem;
+    color: var(--color-dark);
+    text-align: center;
+    
+    font-size: 24px;
+}
+
+
+section.skills .skill .head {
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    padding: 1.6rem;
+    cursor: pointer;
+}
+
+section.skills .skill .head h4 {
+    color: var(--color-white);
+}
+
+section.skills .skill .head .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+section.skills .skill .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.6rem;
+    background: var(--color-light);
+    margin-bottom: 0.3rem;
+    transition: var(--transition);
+}
+section.skills .skill .item:hover {
+    background: var(--color-primary-light);
+}
+section.skills .skill .progress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+section.skills .item .progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: var(--color-warning);
+}
+section.skills .item .progress_1 {
+    height: 100%;
+    width: 90%;
+    background: var(--color-primary);
+}
+section.skills .item .progress_2 {
+    height: 100%;
+    width: 95%;
+    background: var(--color-primary);
+}
+section.skills .item .progress_3 {
+    height: 100%;
+    width: 88%;
+    background: var(--color-primary);
+}
+section.skills .item .progress_4 {
+    height: 100%;
+    width: 70%;
+    background: var(--color-primary);
+}
+
+
+
+
+
+/*======================== RECENT WORK (POTFOLIO)===============*/
+
+
+section.services {
+    background: var(--color-white);
+}
+
+section.services .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;  
+}
+  
+section.services .service {
+    width: 100%;
+    background: var(--color-white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--color-dark);
+    font-size: 0.9rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: var(--transition);
+   
+
+}
+
+
+.recent-work {
+    background: var(--color-dark);
+}
+section.recent-work p  {
+    text-align: center;
+    margin: 4rem  6rem;
+    color: var(--color-white);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: 1.7rem;
+    font-weight: 350;
+}
+
+section.recent-work .container h1 {
+   color: var(--color-primary-light);
+   margin-top: -5rem;
+   margin-bottom: 1rem;
+   
+}
+section.recent-work .project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 60%;
+    margin-left: 17rem;
+   
+}
+
+.recent-work .swiper {
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--color-primary-light);
+    border-radius: 2rem;
+    
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================== TESTIMONIAL SECTION ======================== */
+
+section.testimonials {
+    background: var(--color-light);
+}
+section.testimonials h1{
+    margin-top: -7rem;
+    color: var(--color-primary);
+}
+section.testimonials .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+}
+
+ section.testimonials .carousel {
+    display: flex;
+    align-items: center;
+    width: 43%;
+    gap: 2rem;
+    
+
+ }  
+section.testimonials .testimonial {
+    width: 75%;
+    background: var(--color-white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--color-dark);
+    font-size: 0.9rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: var(--transition);
+}  
+section.testimonials .testimonial:hover{
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+section.testimonials .testimonial p{
+    line-height: 1.3rem;
+    text-align: start;
+}
+section.testimonials .testimonial .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+section.testimonials .testimonial .head .profile-area {
+    display: flex;
+    gap: 1rem;
+}
+section.testimonials .testimonial .head .profile-area .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/*=========================== CONTACT ===========================*/
+
+section.contact {
+    padding: 0;
+    max-width: 100%;
+ 
+
+}
+section.contact .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 49, 116, 0.2);
+    padding: 10rem 0 7rem;
+}
+section.contact .container {
+    width: 50%;
+}
+section.contact .container h1 {
+    margin-top: -7rem;
+    color: var(--color-white); 
+}
+section.contact .container p {
+    text-align: center;
+    color: var(--color-white);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+section.contact form input, section.contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    font-size: 16px;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+    transition: var(--transition);
+
+}
+section.contact form textarea {
+    height: 10rem;
+}
+section.contact form input:focus, section.contact form textarea:focus {
+  background: var(--color-primary-light);
+  color: var(--color-black);  
+
+}
+
+section.contact form input::placeholder, section.contact form textarea::placeholder {
+    color: var(--color-white);
+    font-size: 20px;
+}
+
+section.contact form button{
+    background: var(--color-white);
+    color: var(--color-black);
+    margin: 2rem auto 0;
+    font-size: 24px;
+
+}
+section.contact form button:hover {
+    background: var(--color-primary-light);
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+/*================= ========= FOOTER==================*/
+
+footer{
+    background: var(--color-primary-light);
+   
+    
+}
+footer .container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    margin-bottom: -2rem;
+ 
+}
+footer .container img{
+    margin-top: 3rem;
+    width: 10rem;
+}
+
+footer .container .socials  {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+footer .container .socials  h2{
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+footer .container .con h2{
+    font-size: 1.5rem;
+    
+}
+footer .container .con{
+        margin-top: 3rem;
+}
+footer .container .con p{
+    color: var(--color-primary);
+    font-size: 1.3rem;
+   }
+footer .container .socials a {
+    font-size: 2rem;
+    background: var(--color-light);
+    color: var(--color-primary);
+    padding: 0.3rem;
+    border-radius: 80%;
+    height: 2.6rem;
+    width: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+footer .container .socials a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+footer .whatsapp a{
+    padding: 1rem 2rem;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border-radius: 2rem;
+    transition: var(--transition);
+   
+}
+footer .whatsapp{
+    margin-top: 3rem;
+}
+footer .whatsapp a:hover{
+    color: var(--color-primary);
+    background: green;
+    box-shadow: 0 0.5rem 1rem var(--color-primary);
+}
+
+footer .copyright {
+    border-top: 4px solid var(--color-white);
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+/*
+/*=============================== MEDIA QURIES (PHONE) =======================*/
+
+@media only screen and (max-width: 2048px) {
+    
+section.landing {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 12rem;
+    
+}
+ section.landing .container {
+    display: grid;
+    grid-template-columns: 5rem auto 30rem;
+    gap: 3rem;
+    
+ }
+
+ section.landing .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-left: -4rem;
+    
+ }
+
+
+
+ section.landing .socials a:hover {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+ }
+
+ .landing .info {
+   margin-left: -6rem;
+ }
+ 
+
+
+/*======================SERVICES=========================*/
+
+section.services .container {
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+
+/*====================================ABOUT SECTION ================*/
+
+section.about p {
+    font-size: 29px;
+    margin-right: -2rem;  
+}
+section.about .side_image img{
+    margin-top: -3rem;
+    width: 28rem;
+    margin-left: -4rem;
+}
+
+section.about .info .whatsapp a{
+    text-align: center;
+   
+}
+
+
+/*================== SKILL SECTION ======================*/
+
+section.skills h1{
+    margin-top: -4rem;
+}
+
+section.skills P {
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+    line-height: 1.8rem;
+ 
+}
+
+
+/*======================== RECENT WORK (POTFOLIO)===============*/
+
+
+section.recent-work p  {
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 3rem;
+}
+
+section.recent-work .project{
+    width: 80%;
+    margin-left: 6rem;
+   
+}
+
+
+
+/* =========================== TESTIMONIAL SECTION ======================== */
+
+/*=========================== CONTACT ===========================*/
+
+section.contact .container {
+    width: 80%;
+}
+section.contact .container p {
+    font-size: 25px;
+}
+
+section.contact form button{
+    margin: 2rem auto 0;
+}
+
+
+/*================= ========= FOOTER==================*/
+
+footer .container {
+    width: 100%;
+}
+footer .container img{
+    width: 9rem;
+}
+
+footer .container .socials  {
+    margin-left: 2rem;
+}
+footer .container .socials  h2{
+    position: absolute;
+    margin-top: -6rem;
+    
+}
+
+footer .container .socials a {
+   margin-top: 2rem;
+}
+   
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 0.70rem;
+    }
+    .container{
+        width: 100%;
+    }
+    .btn{
+        padding: 1rem 0 1rem;
+        font-size: 0.90rem;
+    }
+    .btn-primary{
+        width: 11rem;
+        height: 3.5rem;
+        
+    }
+    .body{
+        width: 100%;
+    }
+ /*=================== NAV BAR============*/   
+
+    nav {
+        height: 5rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    nav img {
+        width: 9rem;
+        margin-left: -13rem;
+    }
+        nav .container {
+        width: 100%;
+        
+    }
+
+        nav .container ul {
+        position: fixed;
+        top: 5rem;
+        flex-direction: column;
+        z-index: 3;
+        width: 15rem;
+        height: 100vh;
+        margin-left: -73%;
+        background: var(--color-primary-light);
+        box-shadow: 1rem 0 2rem var(color --color-primary);
+        display: none;
+        transition: var(--transition);
+       
+    }   
+        nav ul li {
+        height: 4.6rem;
+        width: 100%;
+
+    }
+        nav .container ul li a {
+        width: 100%;
+        justify-content: start;
+        padding-left: 3rem;
+        font-size: 1.3rem;
+        transition:var(--transition);
+    }
+        nav .container ul li a:hover {
+        padding-left: 4rem;
+        color: var(--color-primary);
+    } 
+    nav .container ul li a.active {
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
+        nav button  {
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: var(--color-white);
+        margin-right: -17rem;
+        transition: var(--transition);
+        
+}
+    nav button#close-btn {
+    display: none;
+    }
+ /*============================ LANDING SECTION================*/
+
+    section.landing {
+        width: 100%;
+        display: grid;
+        top: 1rem;
+        
+    }
+    section.landing .container {
+        display: grid;
+        grid-template-columns: 0 auto 30rem;
+        gap: 0;
+        height: 80%;
+    }
+
+
+    section.landing .socials a{
+        display: none; 
+    }
+
+    .landing .info h1 {
+        font-size: 2rem;  
+    
+    }
+    .landing .info a{
+    text-align: center;
+        font-size: 1.3rem;
+    }
+    .landing .info  {
+        margin-left: 2rem;
+        margin-right: -10rem;
+    }
+    .landing .info small{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.landing .info h3 {
+    margin: 1.3rem 0;
+    letter-spacing: 0.1rem;
+}
+
+.landing .profile-area{
+    margin-left: 9rem;
+}
+.landing .profile-area .outer-circle {
+    width: 18rem;
+    height: 18rem;
+    
+}
+section.landing .container .inner-circle {
+    width: 12rem;
+    height: 12rem;
+ }
+ section.landing .profile-area .outer-circle span:nth-child(1) {
+    left: calc(50% - 1.5rem);
+    top: -1.5rem ;
+   
+   }
+   section.landing .profile-area .outer-circle span:nth-child(2) {
+      right: -1.5rem;
+      top: calc(50% - 1.5rem); 
+   }
+   section.landing .profile-area .outer-circle span:nth-child(3) {
+      left: -1.5rem;
+      top:  calc(50% - 1.5rem); 
+   }
+   section.landing .profile-area .outer-circle span:nth-child(4) {
+      bottom: -1.5rem;
+      left: calc(50% - 1.5rem); 
+   }
+
+   /*========================== services SECTION =============*/
+    section.services .container {
+    grid-template-columns: 1fr 1fr;
+    }
+    section.services .container .service p{
+        line-height: 1.3rem;
+        font-size: 15px;
+        
+    }
+    section.services .container .service small{
+        font-size: 1.5rem;
+    }
+    section.services .container .service h4{
+        font-size: 1.5rem;
+    }
+
+    /*========================== ABOUT SECTION =============*/
+
+ section.about .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: start;
+    
+ } 
+ section.about p {
+    margin-right: -0.2rem;
+    margin-left: -1rem;
+    text-align: start;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+   
+   
+}
+section.about .side_image img{
+    width: 90%;
+    margin-left: 1rem;
+}
+section.about .info .whatsapp {
+    display: grid;
+    width: 100%;
+   
+   
+}
+.about .info .material-symbols-sharp{
+    font-size: 1.3rem;
+    margin-left: -1rem;
+   
+}
+   
+  /*========================== SKILLS SECTION =============*/
+
+    section.skills .container {
+        width: 94%;
+        gap: 2rem;
+    }
+
+    section.skills p{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -4rem;
+    }
+    section.skills h1{
+       font-size: 3rem;
+       margin-top: -7rem;
+      
+    }
+
+
+ 
+
+ /*========================== RECENT WORK SECTION =============*/
+    section.recent-work .container .projects {
+        grid-template-columns: 1fr;
+    }
+    section.recent-work .container h1{
+        margin-top: -4rem;
+    }
+    section.recent-work .container p{
+        width: 90%;
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    section.recent-work .project{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        
+        margin-left: 4rem;
+       
+    }
+
+ /*========================== TESTIMONIALS SECTION =============*/
+ section.testimonials .swiper-wrapper {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 99%;
+    gap: 1rem;
+}
+ section.testimonials h4{
+    font-size: 1.9rem;
+    color:var(--color-primary);
+ }
+ section.testimonials .testimonial{
+    width: 100%;
+   
+ }
+ 
+ section.testimonials h1{
+    margin-top: -4rem;
+    font-size: 3rem;
+ }
+ section.testimonials small{
+    font-weight: 500;
+    font-size: 1.5rem;
+ }
+ section.testimonials .testimonial p{
+    font-size: 19px;
+    line-height: 1.4rem;
+ }
+  /*========================== CONTACT SECTION =============*/
+ section.contact .container {
+    width: 90%;
+ }
+ section.contact .container p {
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5rem;
+    font-weight: 300;
+    margin-top: -2rem;
+   
+ }
+ section.contact .container label{
+    font-size: 1.4rem;
+ }
+ section.contact form button{
+    padding: 1rem 1.3rem;
+    margin-left: 2.3rem;
+    
+ }
+   /*========================== FOOTER SECTION =============*/
+   footer .container {
+    display: flex;
+    gap: 1rem;
+   }
+   
+   footer .container .con h2{
+    font-size: 1.5rem;
+    
+   }
+   footer .container .con {
+    margin-left: -1rem;
+   }
+   footer .container img{
+    width: 6rem;
+   }
+   footer .container .con p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+   }
+   footer .container .socials  h2{
+    font-size: 1.5rem;
+    
+   }
+   footer .container .whatsapp a{
+    font-size: 15px
+   }
+   footer .container .socials{
+    margin-left: -1rem;
+   }
+   footer .container .socials a{
+    margin-left: -1rem;
+    margin-right: -0.5rem;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        height: 4rem;
+        
+    }
+    nav button  {
+        margin-right: -8rem; 
+    }
+    nav img{
+        width: 6rem;
+        margin-left: -6rem;
+        
+    }
+
+    nav .container ul{
+        top: 4rem;
+        margin-left: -45%;
+        width: 12rem;
+    }
+    nav .container ul li a{
+        font-size: 1.2rem;
+    }
+   
+    section.landing .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;  
+    }
+    section.landing {
+        margin-bottom: -5rem;
+    }
+    
+    
+     .landing .profile-area{
+        margin-left: 0;
+    }
+   .landing .info {
+    text-align: center;
+    width: 98%;
+    margin-top: -12rem;
+    margin-left: 0.3rem;
+   }
+   .landing .info a{
+    display: none;
+   }
+   .landing .info h1{
+    text-align: center;
+   }
+   
+    
+ 
+
+  /*========================== services SECTION =============*/
+   section.services .container {
+   grid-template-columns: 1fr;
+   }
+   section.services h1{
+    margin-top: -8rem;
+    margin-bottom: 1.5rem;
+   }
+   section.services .container .service p{
+    line-height: 1.3rem;
+    font-size: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    }
+    section.services .container .service small{
+    font-size: 1.2rem;
+    }
+    section.services .container .service h4{
+    font-size: 2rem;
+    }
+
+   
+   /*========================== ABOUT SECTION =============*/
+
+   section.about .container {
+       grid-template-columns: 1fr;
+       gap: 1rem;
+       text-align: center;
+   } 
+   section.about p {
+       margin: 0;
+       text-align: center;
+       line-height: 1.3rem;
+       font-size: 19px;
+       font-weight: 300;
+       margin-left: 0;
+   }
+   section.about .side_image img{
+       margin-top: -9rem;
+       width: 25rem;
+   }
+  
+   .about .info .material-symbols-sharp{
+       font-size: 1.3rem;
+   
+   }
+   section.about .info .whatsapp{
+        display: grid;
+        padding: 0;
+        gap: 2rem;
+        width: 100%;
+        margin-left: -1rem;
+    }
+    section.about .info p{
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+    
+   section.about .info .whatsapp a{
+    width: 98%;
+    margin-left: 1rem;
+    }
+  
+ /*========================== SKILLS SECTION =============*/
+
+   section.skills .container {
+       width: 100%;
+       gap: 2rem;
+   }
+   section.skills p{
+        width: 90%;
+        padding: 0;
+        text-align: start;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        font-size: 19px;
+        line-height: 1.3rem;
+       
+      
+    }
+   section.skills .skil> h1{
+        margin-left: 7rem;
+        margin-top: -8rem;
+        margin-bottom: 3rem;
+      
+   }
+
+
+    /*========================== RECENT WORK SECTION =============*/
+   section.recent-work .container .projects {
+       grid-template-columns: 1fr;
+       
+   }
+   section.recent-work .container h1{
+       margin-top: -4rem;
+   }
+   section.recent-work .swiper{
+        margin-left: -2rem;
+        
+    }
+   section.recent-work .container p{
+       font-size: 18px;
+       line-height: 1.4rem;
+       text-align: start;
+       margin-left: 1rem;
+   }
+  
+    /*========================== TESTIMONIALS SECTION =============*/
+    section.testimonials .testimonial p{
+    font-size: 16px;
+    line-height: 1.4rem;
+    margin: 0;
+    }
+    section.testimonials .swiper-wrapper{
+        grid-template-columns: 1fr;
+        }
+   /*========================== CONTACT SECTION =============*/
+   section.contact .container {
+       width: 90%;
+   }
+   section.contact .container p {
+       font-size: 1.2rem;
+   
+   }
+   section.contact form button{
+        font-size: 17px;
+       padding: 1rem 1.3rem;
+       margin-left: 5rem;
+   }
+   /*========================== FOOTER SECTION =============*/
+   footer .container {
+       flex-direction: column;
+       text-align: center;
+   }
+   
+   footer .container .socials  h2{
+        position: absolute;
+        font-size: 1.5rem;
+        margin-top: -7rem;
+        margin-left: 1rem;
+    }
+   footer .container img{
+    margin-bottom: -4rem;
+    margin-top: 1rem;
+   }
+   footer .container .con h2{
+    font-size: 1.4rem;
+    
+   }
+   footer .container .con p{
+    color: var(--color-primary);
+    font-size: 1rem;
+   }
+   footer .container .socials  a {
+    font-size: 2rem;
+   }
+   footer .container .socials{
+    margin-left: -0.1rem;
+   }
+   
+}
+
+@media only screen and (max-width: 320px) {
+   
+    .landing .profile-area{
+        margin-left: 0;
+    }
+    .landing .profile-area .outer-circle {
+        width: 15rem;
+        height: 15rem; 
+    }
+    section.landing .container .inner-circle {
+        width: 10rem;
+        height: 10rem;
+     }
+   section.landing .info {
+    margin-top: -11rem;
+    width: 95%;
+    
+   }
+   .landing .info h1{
+    font-size: 1.6rem;
+    text-align: center;
+   }
+   section.about .side_image img{
+    margin-top: -9rem;
+    width: 18rem;
+    margin-left: 0;
+    }
+    section.about .info .whatsapp a{
+        width: 96%;
+        margin-left: 1rem;
+       }
+    section.about p{
+        text-align: start;
+        margin-right: 1rem;
+    }
+    section.skills p{
+        width: 90%;
+        text-align: start;
+           
+    }
+    section.skills .skil> h1{
+        margin-left: 4rem;
+        font-size: 2.5rem;
+    }
+
+    section.recent-work .container p{
+        width: 90%;
+        font-size: 19px;
+        text-align: start;  
+    }
+    section.recent-work h1{
+        font-size: 1.8rem;
+    }
+
+    section.testimonials h4{
+        font-size: 1.5rem;
+        
+    }
+    section.testimonials h1{
+        font-size: 2.4rem;
+        
+    }
+     section.testimonials small{
+        font-size: 1rem;
+     }
+     section.testimonials .testimonial p{
+        font-size: 16px;
+        line-height: 1.4rem;
+        margin: -1rem;
+     }
+    
+    section.contact .container p {
+        font-size: 1.1rem;
+     }
+     section.contact .container form >button{
+        font-size: 16px;
+        margin-left: 2rem;
+        
+     }
+          
+        footer .container .con h2{
+        font-size: 1.5rem;
+        
+       }
+       footer .container .con p{
+        font-size: 1rem;
+       }
+       footer .container {
+        width: 100%;
+        text-align: center;
+       }
+       footer .container img{
+        margin-top: 1rem;
+       }
+       footer .container .con{
+        margin-bottom: -8rem;
+       }
+       footer .container .socials  h2{
+        position: absolute;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        margin-left: 1rem;
+        
+       }
+       footer .container .socials li{
+        margin-top: 7rem;
+        margin-right: 0;
+        font-size: 2rem;
+
+       }
+       footer .container .socials{
+        margin-left: -0.1rem;
+        
+       }
+       
+   
+  
+    
+}

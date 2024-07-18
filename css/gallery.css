@@ -1,0 +1,272 @@
+
+:root {
+   --color-white: #fff;
+   --color-light: #e5e2e2;
+   --color-dark: #020c26a8;
+   --color-black: #000000;
+   --color-primary: #021034;
+   --color-primary-light: hsl(54, 100%, 51%);
+   --color-success:#29f5a4;
+   --color-warning: #ff6933;
+
+   --transition: all 400ms ease;
+
+
+}
+
+/*--=================================END OF GRNERAL STYLE============================*/
+
+section.landing_gallary {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: 100vw;
+   overflow-x: hidden; 
+}
+section.landing_gallary .container {
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+section.landing_gallary .socials {
+  display: flex;
+  margin-left: 45%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+  
+}
+
+section.landing_gallary .socials a{
+   text-decoration: none;
+   font-size: 2rem;
+   background: var(--color-light);
+   color: var(--color-primary);
+   padding: 0.3rem;
+   border-radius: 50%;
+   height: 2.5rem;
+   width: 2.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: var(--transition);
+}
+
+section.landing_gallary .socials a:hover {
+   background: var(--color-primary-light);
+   color: var(--color-primary);
+}
+
+section.landing_gallary .info{
+  margin: 0 10rem;
+  
+}
+section.landing_gallary .info h1 {
+   text-align: center;
+   margin: 0;
+   font-size: 5rem;
+   color: var(--color-primary-light);
+}
+
+section.landing_gallary h3 {
+   margin-bottom: 1rem;
+   text-align: center;
+   font-size: 40px;
+   color: var(--color-primary-light);
+}
+
+section.landing_gallary .info p {
+   text-align: center;
+   font-weight: 300;
+   font-size: 1.5rem;
+   line-height: 1.9rem;
+}
+section.landing_gallary .info a{
+   margin-left: 45%;
+   margin-top: 4rem;
+}
+/*---====================================END OF LANDING=========================*/
+
+.hero{
+  width: 100%;
+  height: 110%;
+  background: var(--color-dark);
+  overflow: hidden; 
+}
+.hero .carousel{
+   width: 300px;
+   margin: 70px auto 0;
+   overflow: visible;
+   margin-bottom: 2.5rem;
+}
+.hero h2{
+   margin-top: 5.5rem;
+   font-size: 40px;
+   color: var(--color-light);
+   text-align: center;
+   padding-top: 2rem;
+   font-weight: 600; 
+    
+}
+.hero .whatsapp{
+   align-items: center;
+   justify-content: center ;
+   display: flex;
+   margin-top: 2rem;
+   
+}
+.hero .whatsapp a{
+   padding: 1rem 2rem;
+   background: var(--color-primary-light);
+   color: var(--color-primary);
+   border-radius: 2rem;
+   transition: var(--transition);
+}
+.hero .whatsapp a:hover{
+   color: var(--color-white);
+    background: green;
+    box-shadow: 0 0.5rem 1rem var(--color-white);
+}
+.carousel img{
+   -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.4));
+}
+
+/*-==========================END OF GALLERY==========================================*/
+
+
+
+/*==========Media Queriary for MOBILE========*/
+
+@media only screen and (max-width: 600px){
+   section.landing_gallary {
+      width: 100%;
+   }
+   section.landing_gallary .socials {
+     display: none;
+      
+   }
+   section.landing_gallary .container .info{
+      margin: 0;
+      
+   }
+   section.landing_gallary .container .info h1{
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      margin-top: -1.rem;
+   }
+   section.landing_gallary .container .info h3{
+      font-size: 1.5rem;
+      margin-top: 1rem;
+   }
+   section.landing_gallary .container .info p{
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: start;
+      margin: 0.5rem;
+      
+   }
+   section.landing_gallary .container .info a{
+      margin-left: 5rem;
+   }
+   
+   
+}
+
+@media only screen and (max-width: 1200px){
+
+   
+   section.landing_gallary .container {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      
+   }
+   section.landing_gallary .container .info{
+      margin: 0;
+   }
+   
+   section.landing_gallary .socials {
+     margin-left: 35%;
+     
+   }
+   
+   section.landing_gallary .socials a{
+      font-size: 2.2rem;
+      height: 3rem;
+      width: 3rem;
+      
+   }
+   
+   section.landing_gallary .info h1 {
+      font-size: 4rem;
+      line-height: 3.7rem;
+      margin-bottom: 2rem;
+   }
+   
+   section.landing_gallary h3 {
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 40px;
+      color: var(--color-primary-light);
+   }
+   section.landing_gallary .info p {
+      font-size: 1.5rem;
+      margin: 0 2rem;
+   }
+   section.landing_gallary .info a{
+      margin-left: 40%;
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+   /*---====================================END OF LANDING=========================*/
+  
+   .hero .head_1 h2{
+      font-size: 2.5rem; 
+   }
+  
+   
+   /*-==========================END OF GALLERY==========================================*/
+   
+   section.contact .container h1 {
+     font-size: 3rem;
+   }
+
+   section.contact .container p{
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+   }
+   
+    .hero .head_1 h2{
+      margin-top: -2.5rem;
+    }
+
+    footer .container {
+      flex-direction: column;
+      gap: 3rem;
+  }
+  footer .container ul {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.4rem;
+  } 
+  footer .container .socials  h2{
+      font-size: 1rem;
+      margin-left: -4rem;
+  }
+  footer .container .con h2{
+   font-size: 1.5rem;
+   
+  }
+  footer .container .con p{
+   color: var(--color-primary);
+   font-size: 1.3rem;
+  }
+  footer .container .socials  a {
+   font-size: 2rem;
+
+   
+  }
+}
